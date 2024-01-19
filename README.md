@@ -1,3 +1,5 @@
+[![.NET](https://github.com/gregyjames/SlowReverbMaker/actions/workflows/dotnet.yml/badge.svg)](https://github.com/gregyjames/SlowReverbMaker/actions/workflows/dotnet.yml)
+
 # SlowReverbMaker
 
 I wanted to play around with some audio programmatically, and what better way to do that than by making slowed reverbed song remixes?

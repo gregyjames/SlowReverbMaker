@@ -25,7 +25,7 @@ class Program
             var echo = new EchoSampleProvider(slowed, 750, 0.25f, 0.25f);
             var reverbEffect = new ReverbEffect(echo, .5f, 5f, 0.9f, 0.15f);
             var filter = new HighPassFilterSampleProvider(reverbEffect, 25);
-            var boosted_vocals = new BoostVocalSampleProvider(filter, 1f, 250);
+            var boosted_vocals = new BoostVocalSampleProvider(filter, 1.5f, 250);
             WaveFileWriter.CreateWaveFile16(outputFilePath, boosted_vocals);
         }
     }

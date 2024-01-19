@@ -22,10 +22,10 @@ class Program
             var sampleProvider = reader.ToSampleProvider();
 
             var slowed = new SmbPitchShiftingSampleProvider(sampleProvider, 1024, 2, slowdownFactor);
-            var echo = new EchoSampleProvider(slowed, 750, 0.25f, 0.25f);
-            var reverbEffect = new ReverbEffect(echo, .5f, 5f, 0.9f, 0.15f);
+            var echo = new EchoSampleProvider(slowed, 825, 0.35f, 0.25f);
+            var reverbEffect = new ReverbEffect(echo, .5f, 5f, 0.825f, 0.25f);
             var filter = new HighPassFilterSampleProvider(reverbEffect, 25);
-            var boosted_vocals = new BoostVocalSampleProvider(filter, 1.5f, 250);
+            var boosted_vocals = new BoostVocalSampleProvider(filter, 1.5f, 127.5f);
             WaveFileWriter.CreateWaveFile16(outputFilePath, boosted_vocals);
         }
     }

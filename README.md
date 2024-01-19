@@ -15,3 +15,7 @@ The premise for this is fairly straightforward:
 I am not an audio engineer, so if you have ___any___ suggestions on improving the formulas or workflow changes, by all means, go ahead!! Otherwise, feel free to check it out or play around with the settings to match your taste. 
 
 Unfortunately, NAudio uses Media Foundation (windows only) so this experiment is *NOT* cross-platform.
+
+Try it with your own music but these are some of my favorites I tested:
+- Closer - NeYo
+- Tainted Love - Claire Gueresso

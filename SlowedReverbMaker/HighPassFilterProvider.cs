@@ -9,12 +9,12 @@ namespace SlowedReverbMaker
     using NAudio.Dsp;
     using NAudio.Wave;
 
-    public class LowPassFilterSampleProvider : ISampleProvider
+    public class HighPassFilterSampleProvider : ISampleProvider
     {
         private readonly ISampleProvider source;
         private readonly BiQuadFilter lowPassFilter;
 
-        public LowPassFilterSampleProvider(ISampleProvider source, float filterCutoff)
+        public HighPassFilterSampleProvider(ISampleProvider source, float filterCutoff)
         {
             this.source = source;
             this.lowPassFilter = BiQuadFilter.HighPassFilter(source.WaveFormat.SampleRate, filterCutoff, 0.7071f);

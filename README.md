@@ -10,6 +10,7 @@ The premise for this is fairly straightforward:
 3. Custom Echo provider
 4. Custom Reverb provider
 5. High pass filter to clean up some of the muddy low sub frequencies from all the reverb.
+6. PeakingEQ to help boost vocal frequencies
 
 I am not an audio engineer, so if you have ___any___ suggestions on improving the formulas or workflow changes, by all means, go ahead!! Otherwise, feel free to check it out or play around with the settings to match your taste. 
 

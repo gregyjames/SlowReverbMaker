@@ -21,11 +21,12 @@ class Program
         {
             var sampleProvider = reader.ToSampleProvider();
 
-            var slowed = new SmbPitchShiftingSampleProvider(sampleProvider, 512, 2, slowdownFactor);
+            var slowed = new SmbPitchShiftingSampleProvider(sampleProvider, 1024, 2, slowdownFactor);
             var echo = new EchoSampleProvider(slowed, 750, 0.25f, 0.25f);
             var reverbEffect = new ReverbEffect(echo, .5f, 5f, 0.9f, 0.15f);
-            var filter = new LowPassFilterSampleProvider(reverbEffect, 100);
-            WaveFileWriter.CreateWaveFile16(outputFilePath, filter);
+            var filter = new HighPassFilterSampleProvider(reverbEffect, 25);
+            var boosted_vocals = new BoostVocalSampleProvider(filter, 1f, 250);
+            WaveFileWriter.CreateWaveFile16(outputFilePath, boosted_vocals);
         }
     }
 }
